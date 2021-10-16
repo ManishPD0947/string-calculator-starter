@@ -31,7 +31,7 @@ class StringCalculatorShould {
     @Test
     public void multipleDelimiter_ReturnSum() throws Exception {
     	StringCalculator stringCalculator = new StringCalculator();
-    	assertEquals(15,stringCalculator.add("2//.4#3&6"));
+    	assertEquals(33,stringCalculator.add("24#3&6"));
     }
     @Test
     public void  negativeInputReturnsException() throws Exception {
@@ -39,5 +39,9 @@ class StringCalculatorShould {
     	//stringCalculator.add("-4");
     	stringCalculator.add("-4,-9");
     }
-    
+    @Test
+    public void ignoreNumbersGreaterThan1000() throws Exception {
+    	StringCalculator stringCalculator = new StringCalculator();
+    	assertEquals(20,stringCalculator.add("10,10,1001"));
+    }
 }

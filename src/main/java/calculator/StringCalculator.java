@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class StringCalculator {
-	
+
 	public int add(String input) throws Exception {
 		int sum=0;
 		int flag=0;
@@ -24,7 +24,7 @@ class StringCalculator {
     			negativeNumbers.add(Integer.parseInt(numArray[i]));							//Adding negative values in a list for printing in exception message
     		}
     		 if(flag!=1) {
-    			 sum = sum+Integer.parseInt(numArray[i]);
+    			 sum = sum+((Integer.parseInt(numArray[i])>1000)?0:Integer.parseInt(numArray[i]));//Ignoring numbers greater than 1000
     		 }
     	}
 		
@@ -35,10 +35,12 @@ class StringCalculator {
 	    return sum;
 	}
 	
+	
+	
 	public static void main(String[] args) {
 		StringCalculator stringCalculator=new StringCalculator();
 		try {
-			System.out.println("Output : "+stringCalculator.add("-4**-5,\n6"));
+			System.out.println("Output : "+stringCalculator.add("4**5,\n6000"));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
