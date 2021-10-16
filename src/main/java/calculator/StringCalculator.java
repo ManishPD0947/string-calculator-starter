@@ -38,7 +38,7 @@ class StringCalculator {
 	public static void main(String[] args) {
 		StringCalculator stringCalculator=new StringCalculator();
 		try {
-			System.out.println("Output : "+stringCalculator.add("4**5,\n6"));
+			System.out.println("Output : "+stringCalculator.add("-4**-5,\n6"));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
