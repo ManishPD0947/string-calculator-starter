@@ -1,7 +1,7 @@
 package calculator;
 
 class StringCalculator {
-	private final static String delimeter = ",|\n";
+	private final static String delimeter = "[.*-,\n;/%&^#@]+";
     
 	public int add(String input) {
         String [] numArray=input.split(delimeter);

@@ -28,5 +28,9 @@ class StringCalculatorShould {
     	StringCalculator stringCalculator = new StringCalculator();
     	assertEquals(9,stringCalculator.add("2\n4,3"));
     }
-    
+    @Test
+    public void multipleDelimiter_ReturnSum() {
+    	StringCalculator stringCalculator = new StringCalculator();
+    	assertEquals(15,stringCalculator.add("2//.4#3&6"));
+    }
 }
