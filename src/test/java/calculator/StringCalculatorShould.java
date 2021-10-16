@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorShould {
-
+	
     @Test
     void empty_string_should_return_0() {
         StringCalculator stringCalculator = new StringCalculator();
@@ -17,4 +17,12 @@ class StringCalculatorShould {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(1, stringCalculator.add("1"));
     }
+    
+    @Test
+    void whenMoreThanTwoNumbersAreUsed_ReturnValueIsTheSum() {
+    	StringCalculator stringCalculator = new StringCalculator();
+    	assertEquals(16,stringCalculator.add("3,3,10"));
+    }
+    
+    
 }
