@@ -1,7 +1,7 @@
 package calculator;
 
 class StringCalculator {
-	private final static String delimeter = ",";
+	private final static String delimeter = ",|\n";
     
 	public int add(String input) {
         String [] numArray=input.split(delimeter);
@@ -14,6 +14,7 @@ class StringCalculator {
 		
 	}
 
+	//Method to find sum of all the numbers in a string
 	private int addAllNumbers(String[] num) {
 		int sum=0;
 	  
