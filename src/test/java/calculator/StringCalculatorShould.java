@@ -44,4 +44,8 @@ class StringCalculatorShould {
     	StringCalculator stringCalculator = new StringCalculator();
     	assertEquals(20,stringCalculator.add("10,10,1001"));
     }
+    @Test
+    public void countNumberOfTimesAddInvoked() throws Exception {
+    	assertEquals(7,StringCalculator.getCalledCount(),"Number of times Add Method Invoked");
+    }
 }

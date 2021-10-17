@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 class StringCalculator {
+	private static int count;
+	
+	public StringCalculator() {
+		++StringCalculator.count;
+	}
 
 	public int add(String input) throws Exception {
 		int sum=0;
@@ -36,11 +41,15 @@ class StringCalculator {
 	}
 	
 	
+	public static int getCalledCount() {
+		return StringCalculator.count;
+	}
 	
 	public static void main(String[] args) {
 		StringCalculator stringCalculator=new StringCalculator();
 		try {
 			System.out.println("Output : "+stringCalculator.add("4**5,\n6000"));
+			System.out.println("Number of times add method invoked : "+StringCalculator.getCalledCount());
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
